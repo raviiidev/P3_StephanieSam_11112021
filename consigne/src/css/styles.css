@@ -1,0 +1,7 @@
+body {
+  background-color: red;
+}
+
+body .container {
+  background-color: white;
+}
