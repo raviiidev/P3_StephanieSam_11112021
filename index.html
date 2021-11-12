@@ -15,19 +15,22 @@
   <body> 
     <header class="entete">
       <div class="logo">
-      <img src="./images/ohmyfood.png" alt="logo du site"/>
+        <img class="logo__img" src="./images/ohmyfood.png" alt="logo oh my food"/>
       </div>
-
+      
       <form method="post" action="#" class="location">
         <label for="map">
           <i class="fas fa-map-marker-alt"></i>
         </label>
         <input type="text" name="map" id="map" value="Paris, Belleville" />
       </form>
+    </header>
 
+    <main class="menu">
       <div class="description"> 
         <h1 class= "description-h1">Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+        
         <form method="post" action="#" class="explorer">
           <button class="explorer-button">
             <span class="explorer-texte">Explorer nos restaurants</span>
@@ -35,12 +38,114 @@
         </form>
       </div>
 
+      <div class="fonctionnement">
+      <h2>Fonctionnement</h2>
+      <form method ="post" action="#">
+        <button class="btn-fontionnement">
+          <span class ="btn-number">1 </span>
+            <i class="fas fa-mobile-alt"></i>
+              <p class="btn-text">Choississez un restaurant</p>
+        </button>
+      </form>
 
+        <form method ="post" action="#">
+          <button class="btn-fontionnement">
+            <span class ="btn-number">2 </span>
+              <i class="fas fa-list-ul"></i>
+                <p class="btn-text">Composez votre menu</p>
+          </button>
+        </form>
 
-    </header>
+        <form method ="post" action="#">
+          <button class="btn-fontionnement">
+            <span class ="btn-number">3 </span>
+              <i class="fas fa-store"></i>
+                <p class="btn-text">Dégustez au restaurant</p>
+          </button>
+        </form>
+      </div>
+    </main>
+
     
-    <main class="menu"></main>
-    <section class="restaurant"></section>
-    <footer class="findepage"></footer>
+    <section class="restaurant">
+      <h3>Restaurants</h3>
+        <div class="restaurant-card">
+        <article class="card">
+          <a href ="lapalettedugout.html">
+            <span class="card-label">Nouveau</span>
+              <img class="card-img" src="images/plat1.png" alt="Restaurant la Palette du Gout"/>
+                <div class="card-description">
+                  <div class="card-reference"> 
+                    <h3>La palette du goût</h3>
+                      <p>Ménilmontant</p>
+                  </div>
+                    <div class="card-icon">
+                      <i class="far fa-heart"></i>
+                    </div> 
+                </div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href ="lanoteenchantee.html">
+            <span class="card-label">Nouveau</span>
+              <img class="card-img" src="images/plat2.png" alt="Restaurant la Palette du Gout"/>
+                <div class="card-description">
+                  <div class="card-reference"> 
+                    <h3>La note enchantée</h3>
+                      <p>Charonne</p>
+                  </div>
+                    <div class="card-icon">
+                      <i class="far fa-heart"></i>
+                    </div> 
+                </div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href ="alafrancaise.html">
+            <span class="card-label">Nouveau</span>
+              <img class="card-img" src="images/plat3.png" alt="Restaurant la Palette du Gout"/>
+                <div class="card-description">
+                  <div class="card-reference"> 
+                    <h3>A la française</h3>
+                      <p>Cité rouge</p>
+                  </div>
+                    <div class="card-icon">
+                      <i class="far fa-heart"></i>
+                    </div> 
+                </div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href ="ledelicedessens.html">
+            <span class="card-label">Nouveau</span>
+              <img class="card-img" src="images/plat4.png" alt="Restaurant la Palette du Gout"/>
+                <div class="card-description">
+                  <div class="card-reference"> 
+                    <h3>Le Délice des sens</h3>
+                      <p>Folie Méricourt</p>
+                  </div>
+                    <div class="card-icon">
+                      <i class="far fa-heart"></i>
+                    </div> 
+                </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <footer class="findepage">
+      <div class="footer-bloc">
+        <p class="footer-titre">ohmyfood</p>
+        <ul>
+          <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+          <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
 
   </body>
