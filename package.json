@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./main.scss:./style.css",
-    "prefix": "postcss ./style.css --use autoprefixer -d ./css/prefixed/"
+    "sass": "sass --watch ./sass/main.scss:./style.css",
+    "prefix": "postcss ./style.css --use autoprefixer -d css/prefixed"
   },
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/raviiidev/P3_StephanieSam_11112021.git"
