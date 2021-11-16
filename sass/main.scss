@@ -93,6 +93,7 @@ $color-tertiary: #99e2d0;
   }
   .btn-bloc{
       margin-top:23px;
+
       &__btn-fonctionnement{
           display:flex;
           width:100%;
@@ -106,11 +107,8 @@ $color-tertiary: #99e2d0;
             transform: scale(1.02);
             background-color: #f5edff;
           }
-          &__btn-icon{
-            :hover { color : $color-primary;
-          }
+        }
           
-        }}
       
 
       &__btn-number{
@@ -125,14 +123,16 @@ $color-tertiary: #99e2d0;
       &__btn-text{
         font-weight: bold;
       }  
-    }
-
-    .fas {
-      margin-right : 25px;
-      color : #7e7e7e; 
-      }
     
 
+    &__btn-icon{
+      margin-right: 25px;
+      color: #7e7e7e;
+      :hover { color : $color-primary;
+    }
+  }
+}
+    
     .fas fa-mobile-alt{
       font-size : 1.2rem;
       margin-right : 30px;
@@ -195,3 +195,42 @@ $color-tertiary: #99e2d0;
     color: #4cb49b;
     padding: 10px;
   }
+
+  /*================section======================*/
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+    padding : 25px 0 36px 23px;
+    ul{
+    padding: 0;
+    margin-top:26px;
+    }
+  }
+
+  .footer-bloc{
+    &__footer-titre{
+    font-family:"Shrikhand", "Roboto", sans-serif;
+    color: white;
+    font-size : 22px;
+  }
+    &__footer-icon{
+    list-style-type: none;
+    margin-top: 14px;
+    
+  }
+    &__footer-text{
+    color: white;
+    text-decoration: none;
+    
+  }
+  
+  }
+
+  
+
+  
+
+  
+  

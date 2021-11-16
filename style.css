@@ -101,9 +101,6 @@
   transform: scale(1.02);
   background-color: #f5edff;
 }
-.btn-bloc__btn-fonctionnement__btn-icon :hover {
-  color: #9356dc;
-}
 .btn-bloc__btn-number {
   background-color: #9356dc;
   padding: 5px 10px;
@@ -115,10 +112,12 @@
 .btn-bloc__btn-text {
   font-weight: bold;
 }
-
-.fas {
+.btn-bloc__btn-icon {
   margin-right: 25px;
   color: #7e7e7e;
+}
+.btn-bloc__btn-icon :hover {
+  color: #9356dc;
 }
 
 .fas fa-mobile-alt {
@@ -177,6 +176,32 @@
   background-color: #99e2d0;
   color: #4cb49b;
   padding: 10px;
+}
+
+/*================section======================*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  padding: 25px 0 36px 23px;
+}
+.footer ul {
+  padding: 0;
+  margin-top: 26px;
+}
+
+.footer-bloc__footer-titre {
+  font-family: "Shrikhand", "Roboto", sans-serif;
+  color: white;
+  font-size: 22px;
+}
+.footer-bloc__footer-icon {
+  list-style-type: none;
+  margin-top: 14px;
+}
+.footer-bloc__footer-text {
+  color: white;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
