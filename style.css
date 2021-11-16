@@ -1,27 +1,12 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
-/*=======variables============*/
-/*=================================général===================================*/
 * {
   font-family: "Roboto", "Shrikhand", sans-serif;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
 }
 
-/*================header===========================*/
-.logo {
-  margin: 1rem;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 63px;
-}
-.logo__img {
-  padding: 12px;
-}
-
+/*button header */
 .location {
   display: flex;
   -webkit-box-pack: center;
@@ -41,21 +26,7 @@
   background-color: inherit;
 }
 
-/*================main======================*/
-.description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f6f6f6;
-  padding: 3rem;
-  text-align: center;
-}
-.description__p {
-  margin-top: 1rem;
-  font-size: 20px;
-  color: #6e6e6e;
-}
-
+/*bouton accueil description - créer une mixin - media*/
 .btn {
   margin-top: 2rem;
 }
@@ -63,11 +34,11 @@
   font-size: 20px;
   padding: 1rem;
   color: #fff;
-  background: linear-gradient(#ff79da, #9356dc);
+  background: red;
   cursor: pointer;
   border-radius: 25px;
   border: none;
-  box-shadow: 0 5px 5px #c6c6c6;
+  box-shadow: 0 5px 5px red;
   transition: 1s;
   font-weight: bold;
 }
@@ -77,6 +48,54 @@
   }
 }
 
+/*================section======================*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  padding: 25px 0 36px 23px;
+}
+.footer ul {
+  padding: 0;
+  margin-top: 26px;
+}
+
+.footer-bloc__footer-titre {
+  font-family: "Shrikhand", "Roboto", sans-serif;
+  color: white;
+  font-size: 22px;
+}
+.footer-bloc__footer-icon {
+  list-style-type: none;
+  margin-top: 14px;
+}
+.footer-bloc__footer-text {
+  color: white;
+  text-decoration: none;
+}
+
+.fas.fa-hands-helping {
+  margin-right: 10px;
+}
+
+.fas.fa-utensils {
+  margin-right: 16px;
+}
+
+/*header accueil*/
+.logo {
+  margin: 1rem;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 63px;
+}
+.logo__img {
+  padding: 12px;
+}
+
+/*header menu*/
 .fonctionnement {
   padding: 20px;
   margin: 50px 0;
@@ -125,49 +144,57 @@
   margin-right: 30px;
 }
 
-/*================section======================*/
-.restaurant {
-  background-color: #f6f6f6;
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c6c6c6;
+  padding: 3rem;
+  text-align: center;
+}
+.description__p {
+  margin-top: 1rem;
+  font-size: 20px;
+  color: #6e6e6e;
+}
+
+.section-restaurant {
+  background-color: #c6c6c6;
   padding: 53px 20px 63px 20px;
 }
 
-.restaurant-card {
+.restaurant {
   margin-top: 29px;
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 20px;
 }
-
-.card {
+.restaurant__card {
   height: 250px;
-  border: 1px solid blue;
   border-radius: 17px;
   position: relative;
+  box-shadow: 0 5px 7px blue;
+  background-color: white;
 }
-
-.card-img {
+.restaurant__card-img {
   height: 175px;
   width: 100%;
   object-fit: cover;
   border-radius: 17px 17px 0 0;
 }
-
-.card-description {
+.restaurant__card-description {
   display: flex;
   justify-content: space-between;
   padding: 15px;
 }
-
-.card-reference {
+.restaurant__card-reference {
   color: black;
 }
-
-.card-lien {
+.restaurant__card-lien {
   text-decoration: none;
 }
-
-.card-label {
+.restaurant__card-label {
   position: absolute;
   right: 11px;
   top: 14px;
@@ -177,31 +204,9 @@
   color: #4cb49b;
   padding: 10px;
 }
-
-/*================section======================*/
-.footer {
+.restaurant__card-icon {
   display: flex;
-  flex-direction: column;
-  background-color: #353535;
-  padding: 25px 0 36px 23px;
-}
-.footer ul {
-  padding: 0;
-  margin-top: 26px;
-}
-
-.footer-bloc__footer-titre {
-  font-family: "Shrikhand", "Roboto", sans-serif;
-  color: white;
-  font-size: 22px;
-}
-.footer-bloc__footer-icon {
-  list-style-type: none;
-  margin-top: 14px;
-}
-.footer-bloc__footer-text {
-  color: white;
-  text-decoration: none;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
