@@ -28,7 +28,9 @@
 
 /*bouton accueil description - créer une mixin - media*/
 .btn {
-  margin-top: 2rem;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
 }
 .btn__btn-principal {
   font-size: 20px;
@@ -134,7 +136,14 @@
 }
 .btn-bloc__btn-fonctionnement:hover {
   transform: scale(1.02);
-  background-color: #f5edff;
+  background-color: #9356dc;
+}
+.btn-bloc__btn-icon {
+  margin-right: 25px;
+  color: #7e7e7e;
+}
+.btn-bloc__btn-icon :hover {
+  color: #9356dc;
 }
 .btn-bloc__btn-number {
   background-color: #9356dc;
@@ -146,13 +155,6 @@
 }
 .btn-bloc__btn-text {
   font-weight: bold;
-}
-.btn-bloc__btn-icon {
-  margin-right: 25px;
-  color: #7e7e7e;
-}
-.btn-bloc__btn-icon :hover {
-  color: #9356dc;
 }
 
 .fas fa-mobile-alt {
@@ -202,9 +204,8 @@
 .restaurant__card-description {
   display: flex;
   justify-content: space-between;
-  padding: 18px;
   border-radius: 0 0 17px 17px;
-  border: 1px solid;
+  padding: 18px 18px 0 18px;
 }
 .restaurant__card-reference {
   color: black;
@@ -251,18 +252,28 @@
 .menu-bloc__menu-description {
   background-color: white;
   border-radius: 15px;
-  border: 1px solid;
   display: flex;
   justify-content: space-between;
   padding: 10px;
   margin-top: 15px;
+  height: 70px;
+  box-shadow: 0 5px 7px #c6c6c6;
+  align-items: center;
 }
 .menu-bloc__menu-text {
   line-height: 1.5rem;
 }
+.menu-bloc__menu-title {
+  margin-top: 36px;
+}
+.menu-bloc__menu-line {
+  border: 2px solid #99e2d0;
+  margin-top: 8px;
+  width: 15%;
+}
 
 .menu-card {
-  padding: 18px;
+  padding: 0 18px 18px 18px;
 }
 
 /*# sourceMappingURL=style.css.map */

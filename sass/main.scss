@@ -42,17 +42,29 @@ $color-box-shadow : #c6c6c6;
   &__menu-description {
   background-color: white;
   border-radius: 15px;
-  border : 1px solid;
   display : flex;
   justify-content: space-between;
   padding: 10px;
-  margin-top: 15px;}
+  margin-top: 15px;
+  height : 70px;
+  box-shadow: 0 5px 7px $color-box-shadow;
+  align-items: center;
+  }
   &__menu-text {
     line-height: 1.5rem;
-
+  }
+  &__menu-title{
+    margin-top: 36px;
+  }
+  &__menu-line {
+    border : 2px solid #99e2d0;
+    margin-top: 8px;
+    width : 15%;
   }
 }
 
 .menu-card {
-  padding: 18px;
+  padding: 0 18px 18px 18px;
 }
+
+

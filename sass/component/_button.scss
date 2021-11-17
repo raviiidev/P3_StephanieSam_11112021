@@ -21,7 +21,9 @@
 
 /*bouton accueil description - créer une mixin - media*/
 .btn {
-  margin-top: 2rem;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
 
   &__btn-principal {
     font-size: 20px;
