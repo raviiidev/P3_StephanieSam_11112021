@@ -175,7 +175,7 @@
 }
 
 .section-restaurant {
-  background-color: #f6f6f6;
+  background-color: #c6c6c6;
   padding: 53px 20px 63px 20px;
 }
 
@@ -184,7 +184,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 20px;
+  gap: 17px;
 }
 .restaurant__card {
   height: 250px;
@@ -202,7 +202,9 @@
 .restaurant__card-description {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  padding: 18px;
+  border-radius: 0 0 17px 17px;
+  border: 1px solid;
 }
 .restaurant__card-reference {
   color: black;
@@ -219,13 +221,19 @@
   background-color: #99e2d0;
   color: #4cb49b;
   padding: 10px;
+  font-weight: bold;
 }
 .restaurant__card-icon {
   display: flex;
   align-items: center;
+  font-size: 20px;
+}
+.restaurant__card-title {
+  font-family: "shrikhand", "Roboto", sans-serif;
 }
 
-.menu {
+/*a la française*/
+.menu-page {
   display: flex;
   flex-direction: column;
   margin-top: -30px;
@@ -236,7 +244,25 @@
 }
 
 .card-reference h1 {
-  font-family: "Shrikhand";
+  font-family: "shrikhand", "Roboto", sans-serif;
+  font-size: 25px;
+}
+
+.menu-bloc__menu-description {
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 15px;
+}
+.menu-bloc__menu-text {
+  line-height: 1.5rem;
+}
+
+.menu-card {
+  padding: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */

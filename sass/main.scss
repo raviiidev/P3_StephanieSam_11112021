@@ -11,6 +11,7 @@
 @import "./utils/variable";
 @import "./utils/mixin";
 
+
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
@@ -19,8 +20,8 @@ $color-background: #f6f6f6;
 $color-box-shadow : #c6c6c6;
 
 
-
-.menu {
+/*a la française*/
+.menu-page {
   display :flex;
   flex-direction: column;
   margin-top: -30px;
@@ -28,10 +29,30 @@ $color-box-shadow : #c6c6c6;
   border-radius: 25px 25px 0 0;
   position: relative;
   z-index: 1;
+
 }
 
 .card-reference h1 {
-  font-family: "Shrikhand";
+  font-family: "shrikhand", "Roboto", sans-serif;
+  font-size : 25px;
 }
 
 
+.menu-bloc {
+  &__menu-description {
+  background-color: white;
+  border-radius: 15px;
+  border : 1px solid;
+  display : flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 15px;}
+  &__menu-text {
+    line-height: 1.5rem;
+
+  }
+}
+
+.menu-card {
+  padding: 18px;
+}
