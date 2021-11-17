@@ -6,82 +6,32 @@
 @import "./layouts/footer";
 @import "./layouts/header";
 @import "./pages/accueilfonctionnement";
+@import "./pages/accueil-description";
+@import "./pages/section-restaurant";
 @import "./utils/variable";
 @import "./utils/mixin";
 
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$color-linear: linear-gradient(#ff79da, #9356dc);
+$color-background: #f6f6f6;
+$color-box-shadow : #c6c6c6;
 
 
 
-.description {
-  display: flex;
+.menu {
+  display :flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #c6c6c6;
-  padding: 3rem;
-  text-align: center;
-  &__p {
-    margin-top: 1rem;
-    font-size: 20px;
-    color: #6e6e6e;
-  }
-}
-
-
-
-.section-restaurant {
+  margin-top: -30px;
   background-color: $color-background;
-  padding: 53px 20px 63px 20px;
+  border-radius: 25px 25px 0 0;
+  position: relative;
+  z-index: 1;
 }
 
-.restaurant {
-  margin-top: 29px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 20px;
-
-  &__card {
-    height: 250px;
-    border-radius: 17px;
-    position: relative;
-    box-shadow: 0 5px 7px blue;
-    background-color: white;
-  }
-
-  &__card-img {
-    height: 175px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 17px 17px 0 0;
-  }
-
-  &__card-description {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-  }
-
-  &__card-reference {
-    color: black;
-  }
-
-  &__card-lien {
-    text-decoration: none;
-  }
-
-  &__card-label {
-    position: absolute;
-    right: 11px;
-    top: 14px;
-    border: 1px solid #99e2d0;
-    border-radius: 5px;
-    background-color: #99e2d0;
-    color: #4cb49b;
-    padding: 10px;
-  }
-
-  &__card-icon {
-    display: flex;
-    align-items: center;
-  }
+.card-reference h1 {
+  font-family: "Shrikhand";
 }
+
+
