@@ -1,3 +1,5 @@
+
+
 /*button header */
 .location {
   display: flex;
@@ -8,7 +10,7 @@
   -ms-flex-align: center;
   align-items: center;
   height: 50px;
-  background-color: #eaeaea;
+  background-color: $color-background;
   box-shadow: inset 0 10px 5px -8px #c5c4c4;
 
   &__input {
@@ -16,6 +18,7 @@
     text-align: center;
     border: none;
     background-color: inherit;
+    width : 150px;
   }
 }
 
@@ -26,20 +29,25 @@
   justify-content: center;
 
   &__btn-principal {
-    font-size: 20px;
-    padding: 1rem;
+    font-size: 16px;
+    padding: 18px;
     color: #fff;
-    background: linear-gradient(#ff79da, #9356dc);
+    background: $color-linear;
     cursor: pointer;
     border-radius: 25px;
     border: none;
     box-shadow: 0 5px 5px #c6c6c6;
     transition: 1s;
     font-weight: bold;
+    width : 218px;
 
-    @media (min-width: 768px) {
+
+    @media (min-width: $tablet) {/*-modif-*/
+      width : 400px;
+      width : 100%;
       &:hover {
         transform: scale(1.15);
+
       }
     }
   }

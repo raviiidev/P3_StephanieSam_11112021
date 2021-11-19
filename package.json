@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./style.css",
-    "prefix": "postcss ./style.css --use autoprefixer -d css/prefixed"
+    "sass": "sass --watch ./sass/main.scss:./style.css"
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +16,5 @@
     "url": "https://github.com/raviiidev/P3_StephanieSam_11112021/issues"
   },
   "homepage": "https://github.com/raviiidev/P3_StephanieSam_11112021#readme",
-  "description": ""
+  "description": "Projet 3 Oh My food"
 }

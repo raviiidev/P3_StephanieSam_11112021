@@ -1,23 +1,19 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 
+@import "./utils/variables";
+@import "./utils/mixin";
 @import "./base/config";
 @import "./component/button";
 @import "./layouts/footer";
 @import "./layouts/header";
-@import "./pages/accueilfonctionnement";
+@import "./pages/accueil-fonctionnement";
 @import "./pages/accueil-description";
 @import "./pages/section-restaurant";
-@import "./utils/variable";
-@import "./utils/mixin";
 
 
-$color-primary: #9356dc;
-$color-secondary: #ff79da;
-$color-tertiary: #99e2d0;
-$color-linear: linear-gradient(#ff79da, #9356dc);
-$color-background: #f6f6f6;
-$color-box-shadow : #c6c6c6;
+
+
 
 
 /*a la française*/
@@ -25,11 +21,10 @@ $color-box-shadow : #c6c6c6;
   display :flex;
   flex-direction: column;
   margin-top: -30px;
-  background-color: $color-background;
+  background-color: white;
   border-radius: 25px 25px 0 0;
   position: relative;
   z-index: 1;
-
 }
 
 .card-reference h1 {
@@ -38,7 +33,10 @@ $color-box-shadow : #c6c6c6;
 }
 
 
-.menu-bloc {
+.menu-bloc { /*modif*/
+  @media (min-width :$desktop){
+    width: 30%;
+  }
   &__menu-description {
   background-color: white;
   border-radius: 15px;
@@ -57,14 +55,26 @@ $color-box-shadow : #c6c6c6;
     margin-top: 36px;
   }
   &__menu-line {
-    border : 2px solid #99e2d0;
+    border : 2px solid $color-tertiary;
     margin-top: 8px;
-    width : 15%;
+    width : 40px;
   }
 }
 
 .menu-card {
   padding: 0 18px 18px 18px;
+  @media (min-width :$desktop){ /*modif*/
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
-
+@media (min-width :$desktop){
+ .menu {
+   display : flex;
+   flex-direction: row-reverse;
+   justify-content: space-between;
+   align-items: center;
+   padding: 2rem;
+ }
+}
