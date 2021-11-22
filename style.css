@@ -253,11 +253,34 @@
 .restaurant__card-description {
   display: flex;
   justify-content: space-between;
-  border-radius: 0 0 17px 17px;
-  padding: 18px 18px 0 18px;
+  align-items: baseline;
+  margin-right: 20px;
+}
+.restaurant__card-description .emptyHeart {
+  font-size: 1.7rem;
+  cursor: pointer;
+  position: relative;
+  transition: color 150ms 50ms ease;
+}
+.restaurant__card-description .emptyHeart:hover {
+  color: transparent;
+}
+.restaurant__card-description .emptyHeart:hover > .fullHeart {
+  transform: scale(1);
+}
+.restaurant__card-description .fullHeart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(170deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0);
+  transition: transform 150ms 50ms ease-in-out;
 }
 .restaurant__card-reference {
   color: black;
+  margin-left: 20px;
 }
 .restaurant__card-lien {
   text-decoration: none;
