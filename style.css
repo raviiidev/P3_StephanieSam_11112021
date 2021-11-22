@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 /*breakpoint*/
 * {
@@ -17,8 +16,17 @@
   -ms-flex-align: center;
   align-items: center;
   height: 50px;
-  background-color: #f6f6f6;
+  background-color: #eaeaea;
   box-shadow: inset 0 10px 5px -8px #c5c4c4;
+}
+@media (min-width: 1024px) {
+  .location {
+    width: 300px;
+    border-radius: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+  }
 }
 .location__input {
   font-size: 20px;
@@ -28,7 +36,6 @@
   width: 150px;
 }
 
-/*bouton accueil description - créer une mixin - media*/
 .btn {
   margin: 2rem;
   display: flex;
@@ -48,32 +55,38 @@
   width: 218px;
 }
 @media (min-width: 768px) {
-  .btn__btn-principal {
-    /*-modif-*/
-    width: 400px;
-    width: 100%;
-  }
   .btn__btn-principal:hover {
     transform: scale(1.15);
   }
 }
 
-/*================section======================*/
 .footer {
-  display: flex;
-  flex-direction: column;
   background-color: #353535;
-  padding: 25px 0 36px 23px;
+  padding: 25px;
 }
 .footer ul {
+  display: flex;
+  flex-direction: column;
   padding: 0;
-  margin-top: 26px;
+  margin: 26px 0;
+}
+@media (min-width: 768px) {
+  .footer ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 .footer-bloc__footer-titre {
   font-family: "Shrikhand", "Roboto", sans-serif;
   color: white;
   font-size: 22px;
+}
+@media (min-width: 768px) {
+  .footer-bloc__footer-titre {
+    display: flex;
+    justify-content: center;
+  }
 }
 .footer-bloc__footer-icon {
   list-style-type: none;
@@ -162,11 +175,11 @@
 }
 .btn-bloc__btn-number {
   background-color: #9356dc;
-  padding: 5px 10px;
-  margin-left: -12px;
-  margin-right: 25px;
   color: white;
-  border-radius: 50%;
+  border-radius: 50px;
+  padding: 5px 10px;
+  margin-right: 25px;
+  margin-left: -12px;
 }
 .btn-bloc__btn-text {
   font-weight: bold;
@@ -250,6 +263,7 @@
   text-decoration: none;
 }
 .restaurant__card-label {
+  font-weight: bold;
   position: absolute;
   right: 11px;
   top: 14px;
@@ -258,7 +272,6 @@
   background-color: #99e2d0;
   color: #4cb49b;
   padding: 10px;
-  font-weight: bold;
 }
 .restaurant__card-icon {
   display: flex;
@@ -269,7 +282,6 @@
   font-family: "shrikhand", "Roboto", sans-serif;
 }
 .restaurant__bloc {
-  /*modif*/
   display: flex;
   flex-direction: column;
   gap: 17px;
@@ -282,7 +294,6 @@
   }
 }
 
-/*a la française*/
 .menu-page {
   display: flex;
   flex-direction: column;
@@ -298,9 +309,6 @@
   font-size: 25px;
 }
 
-.menu-bloc {
-  /*modif*/
-}
 @media (min-width: 1024px) {
   .menu-bloc {
     width: 30%;
@@ -311,11 +319,11 @@
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  align-items: center;
   margin-top: 15px;
+  padding: 10px;
   height: 70px;
   box-shadow: 0 5px 7px #c6c6c6;
-  align-items: center;
 }
 .menu-bloc__menu-text {
   line-height: 1.5rem;
@@ -334,7 +342,6 @@
 }
 @media (min-width: 1024px) {
   .menu-card {
-    /*modif*/
     display: flex;
     justify-content: space-around;
   }

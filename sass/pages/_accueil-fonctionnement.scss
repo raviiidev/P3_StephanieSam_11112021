@@ -11,8 +11,6 @@
     }
   }
 
-  
-
   .btn-bloc{
       margin-top:23px;
 
@@ -28,7 +26,6 @@
           &:hover {
             transform: scale(1.02);
             background-color : $color-secondary;
-           
           }
         }
         
@@ -42,20 +39,12 @@
       
 
       &__btn-number{
-          background-color: $color-primary;
-          padding: 5px 10px;
-          margin-left : -12px;
-          margin-right : 25px;
-          color : white;
-          border-radius: 50%;
+          @include fonctionnement-card-number;
         }
 
       &__btn-text{
         font-weight: bold;
-      }  
-    
-
-      
+      }            
 }
     
     .fas fa-mobile-alt{

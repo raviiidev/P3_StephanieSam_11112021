@@ -5,7 +5,7 @@
   h2{
     text-align: center;
   }
-}
+  }
 }
 
 .restaurant {
@@ -15,8 +15,6 @@
   width: 100%;
   gap: 17px; 
   
- 
-
   &__card {
     height: 250px;
     border-radius: 17px;
@@ -53,15 +51,7 @@
   }
 
   &__card-label {
-    position: absolute;
-    right: 11px;
-    top: 14px;
-    border: 1px solid $color-tertiary;
-    border-radius: 5px;
-    background-color: $color-tertiary;
-    color: #4cb49b;
-    padding: 10px;
-    font-weight: bold;
+    @include card-label-bloc;
   }
 
   &__card-icon {
@@ -74,7 +64,7 @@
     font-family : "shrikhand", "Roboto", sans-serif;
   }
 
-  &__bloc {/*modif*/
+  &__bloc {
     display: flex;
     flex-direction : column;
     gap: 17px;
