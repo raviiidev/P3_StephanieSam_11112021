@@ -25,14 +25,17 @@
           box-shadow: 0px 5px 7px $color-box-shadow;
           &:hover {
             transform: scale(1.02);
-            background-color : $color-secondary;
+            background-color : #f5edff;
           }
         }
         
       &__btn-icon{
+        
+        
           margin-right: 25px;
           color: #7e7e7e;
           :hover { 
+            
             color : $color-primary;
         }
       }   

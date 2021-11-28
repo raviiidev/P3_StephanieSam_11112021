@@ -50,7 +50,8 @@
     font-size: 1.7rem;
     cursor: pointer;
     position: relative;
-    transition: color 150ms 50ms ease;
+    transition: color 100ms 50ms ease;
+    color : $color-box-shadow;
     &:hover {
       color: transparent;
     }
