@@ -16,31 +16,30 @@
 
       &__btn-fonctionnement{
           display:flex;
+          justify-content: flex-start;
           width:100%;
           padding : 23px 0;
           align-items : center;
           border-radius : 15px;
           background-color: $color-background;
           border : none;
+          font-size: 1.1rem;
           box-shadow: 0px 5px 7px $color-box-shadow;
           &:hover {
             transform: scale(1.02);
             background-color : #f5edff;
+           &:hover > .fas {     
+             color : $color-primary;
+           }
           }
         }
         
       &__btn-icon{
-        
-        
           margin-right: 25px;
           color: #7e7e7e;
-          :hover { 
-            
-            color : $color-primary;
         }
-      }   
-      
-
+         
+    
       &__btn-number{
           @include fonctionnement-card-number;
         }
@@ -48,7 +47,7 @@
       &__btn-text{
         font-weight: bold;
       }            
-}
+    }
     
     .fas fa-mobile-alt{
       font-size : 1.2rem;

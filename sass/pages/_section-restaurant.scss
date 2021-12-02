@@ -16,9 +16,10 @@
   gap: 17px; 
   
   &__card {
+    position: relative;
     height: 250px;
     border-radius: 17px;
-    position: relative;
+   
     box-shadow: 0 5px 7px $color-box-shadow;
     background-color: white;
     
@@ -39,13 +40,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      @include heart-transition;
+      padding : 18px 18px 0 18px;
       margin-right: 20px;
+      border-radius: 0 0 17px 17px;
+      @include heart-transition;
   }
 
   &__card-reference {
-    color: black;
     margin-left :20px;
+    color:black;
   }
 
   &__card-lien {
@@ -64,7 +67,7 @@
 
   &__card-title{
     font-family : "shrikhand", "Roboto", sans-serif;
-    color: red;
+    font-size :25px;
   }
 
   &__bloc {

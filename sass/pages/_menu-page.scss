@@ -2,7 +2,7 @@
     display :flex;
     flex-direction: column;
     margin-top: -30px;
-    background-color: white;
+    background-color: $color-background;
     border-radius: 25px 25px 0 0;
     position: relative;
     z-index: 1;
@@ -12,37 +12,98 @@
     font-family: "shrikhand", "Roboto", sans-serif;
     font-size : 25px;
   }
-  
+
   .menu-bloc { 
     
     @media (min-width :$desktop){
       width: 30%;
     }
       
-    &__menu-description {
-    @include btn-page-menu;
-      animation: charging-menu 1.5s ease-in-out forwards ;
-      @for $i from 1 through 14 {
-        &:nth-child(#{$i}) {
-              animation-delay: 150ms * $i;
-          }   
-      } 
-    }
-
-    &__menu-text {
+    &__menu-description{
+      @include btn-page-menu;
+        animation: charging-menu 1s ease-in-out forwards ;
+        @for $i from 1 through 14 {
+          &:nth-child(#{$i}) {
+                animation-delay: 100ms* $i;
+            }   
+        } 
+      overflow : hidden;
+      &:hover > .menu-bloc__menu-valeur {
+        margin-right :0;
+      }
+      &:hover .item__price__chosen--icon {
+        animation : quaterspin 0.5s ease-in-out;
+      }
+      }
+    
+    &__menu-text{
       line-height: 1.5rem;
+      padding : 1rem;
+      overflow : hidden;
+      white-space : nowrap;
     }
     &__menu-title{
       margin-top: 36px;
     }
-    &__menu-line {
+    &__menu-line{
+      background-color: $color-tertiary;
       border : 2px solid $color-tertiary;
       margin-top: 8px;
       width : 40px;
     }
+    &__menu-valeur {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      margin-right: -3rem;
+      transition: margin-right 0.3s;
+      overflow: hidden;
+      flex-shrink: 0;
+      height: 100%;
+      }
+      &__menu-price {
+      padding: 1rem;
+      font-weight: bold;
+      }
+      &__menu-validation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-tertiary;
+      color: white;
+      width: 3rem;
+      height: 100%;
+      border-radius: 0 15px 15px 0;
+      }
   }
+
+      .menu-bloc__menu-text h4, p {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      }
+      
+      @keyframes quaterspin {
+      0% {
+      transform: rotate(-360deg);
+      }
+      100% {
+      transform: rotate(0);
+      }
+      }
+      
+      
+      
+      @media (min-width: $desktop) {
+      .menu {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      }
+      }
   
-  .menu-card {
+  .menu-card{
     padding: 0 18px 18px 18px;
     @media (min-width :$desktop){ 
       display: flex;
@@ -50,20 +111,11 @@
     }
   }
   
-  @media (min-width :$desktop){
-   .menu {
-     display : flex;
-     flex-direction: row-reverse;
-     justify-content: space-between;
-     align-items: center;
-     padding: 2rem;
-   }
-  }
 
   @keyframes charging-menu {
     from {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(20PX);
     }
     to{
         opacity: 1;
