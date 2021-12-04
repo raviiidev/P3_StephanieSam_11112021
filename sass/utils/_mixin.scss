@@ -42,31 +42,28 @@
   margin-right: 25px;
   margin-left: -12px;
 }
-
-@mixin heart-transition {
-  .emptyHeart {
-    font-size: 1.7rem;
-    cursor: pointer;
-    position: relative;
-    transition: color 100ms 50ms;
-    color : $color-box-shadow;
-    &:hover {
-      color: transparent;
-    }
-    &:hover > .fullHeart {
-      transform: scale(1);
-    }
+@mixin heart-transition{
+.emptyHeart {
+  font-size: 1.7rem;
+  cursor: pointer;
+  position: relative;
+  transition: color 100ms 50ms;
+  color : $color-box-shadow;
+  &:hover {
+    color: transparent;
   }
-  .fullHeart {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(170deg, $color-secondary, $color-primary);
-    background-clip: text ;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transform: scale(0);
-    transition: transform 150ms 50ms ease-in-out;
-    
+  &:hover > .fullHeart {
+    transform: scale(1);
   }
+}
+.fullHeart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(170deg, $color-secondary, $color-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0);
+  transition: transform 150ms 50ms ease-in-out;
+}
 }
