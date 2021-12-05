@@ -34,13 +34,12 @@
   justify-content: center;
   text-decoration: none;
 
-  &__text {
+  &__text{
     @include btn-principal-container;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $tablet){
       &:hover {
         transform: scale(1.15);
-
       }
     }
   }
