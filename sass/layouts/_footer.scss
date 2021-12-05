@@ -1,43 +1,43 @@
-.footer{
-    background-color: #353535;
-    padding : 25px;
-    ul{
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin:26px 0;
-    @media (min-width: $tablet){
-        flex-direction: row;
-        justify-content: space-around;
-      }
+.footer {
+  background-color: #353535;
+  padding : 25px;
+
+  &__list{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin:26px 0;
+  @media (min-width: $tablet){
+      flex-direction: row;
+      justify-content: space-around;
     }
   }
 
-  .footer-bloc{
-    &__footer-titre{
-    font-family:"Shrikhand", "Roboto", sans-serif;
-    color: white;
-    font-size : 22px;
-    @media (min-width: $tablet){
-        display: flex;
-        justify-content: center;
-      }
-    }
-    &__footer-icon{
-    list-style-type: none;
-    margin-top: 14px;
-    }
-    &__footer-text{
-    color: white;
-    text-decoration: none;
+  &__titre{
+  font-family:"Shrikhand", "Roboto", sans-serif;
+  color: white;
+  font-size : 22px;
+  @media (min-width: $tablet){
+      display: flex;
+      justify-content: center;
     }
   }
 
-  .fas.fa-hands-helping {
-  margin-right: 10px;
-  }
+  &__icon{
+  list-style-type: none;
+  margin-top: 14px;
+ 
+}
+  &__text{
+  color: white;
+  text-decoration: none;
+}
+}
 
-  .fas.fa-utensils{
-    margin-right: 16px;
-  }
-  
+.fas.fa-hands-helping {
+margin-right: 10px;
+}
+
+.fas.fa-utensils{
+  margin-right: 16px;
+}

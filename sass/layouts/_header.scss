@@ -1,35 +1,34 @@
-/*header accueil*/
-
+/*================header page d'accueil===========================*/
 .logo {
   margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  align-items : center;
+  align-items:center;
+  
   &__img {
     padding: 12px;
-    height : 60px;
-    position :relative;
+    height:60px;
+    position:relative;
+    @include typo-logo;
   }
-  &__header-fleche {
-    color : black;
-    position: absolute;
-    left: 21px;
-    &:hover {
-      transform: scale(1.3);
+  /*=================header page menu=========================*/
+  &__header-fleche{
+    color:black;
+    position:absolute;
+    left:21px;
+    &:hover{
+      transform:scale(1.3);
     }
   }
-
-
 }
-
-
-/*header menu*/
-.header-menu {
-  &__card-img {
-    height : 260px;
-    width: 100%;
-    object-fit: cover;
+.header-menu{
+  &__card-img{
+    height:260px;
+    width:100%;
+    object-fit: cover;   
   }
 }

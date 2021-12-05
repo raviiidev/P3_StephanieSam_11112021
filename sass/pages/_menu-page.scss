@@ -14,7 +14,6 @@
   }
 
   .menu-bloc { 
-    
     @media (min-width :$desktop){
       width: 30%;
     }
@@ -110,7 +109,6 @@
       justify-content: space-around;
     }
   }
-  
 
   @keyframes charging-menu {
     from {
@@ -122,3 +120,5 @@
         transform: translateY(0px);
     }
 }
+
+
