@@ -1,123 +1,115 @@
 .menu-page {
-    display :flex;
-    flex-direction: column;
-    margin-top: -30px;
-    background-color: $color-background;
-    border-radius: 25px 25px 0 0;
-    position: relative;
-    z-index: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px 25px 0 0;
+  margin-top: -30px;
+  background-color: $color-background;
+  position: relative;
+  z-index: 1;
+}
+.menu-card {
+  padding: 0 18px 18px 18px;
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-around;
   }
-  
-  .card-reference h1 {
-    font-family: $font-shrikhand;
-    font-size : 25px;
+}
+.menu-bloc {
+  @media (min-width: $desktop) {
+    width: 30%;
   }
-
-  .menu-bloc { 
-    @media (min-width :$desktop){
-      width: 30%;
+  &__description {
+    @include btn-page-menu;
+    animation: appear 1s ease-in-out forwards;
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        animation-delay: 150ms * $i;
+      }
     }
-      
-    &__menu-description{
-      @include btn-page-menu;
-        animation: charging-menu 1s ease-in-out forwards ;
-        @for $i from 1 through 14 {
-          &:nth-child(#{$i}) {
-                animation-delay: 100ms* $i;
-            }   
-        } 
-      overflow : hidden;
-      &:hover > .menu-bloc__menu-valeur {
-        margin-right :0;
-      }
-      &:hover .item__price__chosen--icon {
-        animation : quaterspin 0.5s ease-in-out;
-      }
-      }
-    
-    &__menu-text{
-      line-height: 1.5rem;
-      padding : 1rem;
-      overflow : hidden;
-      white-space : nowrap;
-      
+    overflow: hidden;
+    &:hover > .menu-bloc__valeur {
+      margin-right: 0;
     }
-    &__menu-title{
-      margin-top: 36px;
-    }
-    &__menu-line{
-      background-color: $color-tertiary;
-      border : 2px solid $color-tertiary;
-      margin-top: 8px;
-      width : 40px;
-    }
-    &__menu-valeur {
-      display: flex;
-      align-items: center;
-      margin-left: auto;
-      margin-right: -3rem;
-      transition: margin-right 0.3s;
-      overflow: hidden;
-      flex-shrink: 0;
-      height: 100%;
-      }
-      &__menu-price {
-      padding: 1rem;
-      font-weight: bold;
-      }
-      &__menu-validation {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: $color-tertiary;
-      color: $white;
-      width: 3rem;
-      height: 100%;
-      border-radius: 0 15px 15px 0;
-      }
-  }
-
-      .menu-bloc__menu-text h4, p {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      }
-      
-      @keyframes quaterspin {
-      0% {
-      transform: rotate(-360deg);
-      }
-      100% {
-      transform: rotate(0);
-      }
-      }
-      
-      @media (min-width: $desktop) {
-      .menu {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem;
-      }
-      }
-  
-  .menu-card{
-    padding: 0 18px 18px 18px;
-    @media (min-width :$desktop){ 
-      display: flex;
-      justify-content: space-around;
+    &:hover .item-price {
+      animation: quaterspin 0.5s ease-in-out;
     }
   }
-
-  @keyframes charging-menu {
-    from {
-        opacity: 0;
-        transform: translateY(20PX);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0px);
-    }
+  &__text {
+    padding: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 1.3;
+  }
+  &__title {
+    margin-top: 36px;
+   font-weight:300;
+  }
+  &__valeur {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: -3rem;
+    transition: margin-right 0.3s;
+    overflow: hidden;
+    flex-shrink: 0;
+    height: 100%;
+  }
+  &__price {
+    padding: 1rem;
+    font-weight: bold;
+  }
+  &__validation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-tertiary;
+    color: $color-white;
+    width: 3rem;
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+  }
+  &__meal {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .menu-bloc__title::after{
+    content:"";
+    display:block;
+    background-color:$color-tertiary;
+    border:2px solid $color-tertiary;
+    margin-top:8px;
+    width:40px;
+  }
 }
 
+@keyframes quaterspin {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media (min-width: $desktop) {
+  .menu {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+  }
+}
 

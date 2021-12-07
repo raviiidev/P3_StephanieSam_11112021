@@ -15,7 +15,7 @@
 
   &__titre{
   font-family: $font-shrikhand;
-  color: $white;
+  color: $color-white;
   font-size : 22px;
   @media (min-width: $tablet){
       display: flex;
@@ -29,7 +29,7 @@
  
 }
   &__text{
-  color: $white;
+  color: $color-white;
   text-decoration: none;
 }
 }
